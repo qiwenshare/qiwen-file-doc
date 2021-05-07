@@ -1,0 +1,22 @@
+{
+  "name": "qiwen-file-doc",
+  "version": "1.0.0",
+  "description": "奇文网盘功能介绍和说明",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/qiwen-cloud/qiwen-file-doc.git"
+  },
+  "author": "liyating",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
+}
