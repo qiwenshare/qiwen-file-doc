@@ -4,7 +4,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: 'QWshare.ico' }]
   ],
-  base: '/dist/', // 默认路径
+  base: '/docs/',
   themeConfig: {
     logo: '/img/logo.png',
     nav: [
