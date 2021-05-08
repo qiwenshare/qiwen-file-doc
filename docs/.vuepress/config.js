@@ -60,6 +60,7 @@ module.exports = {
     displayAllHeaders: true
   },
   plugins: [
-    "@vuepress/plugin-medium-zoom"
+    "@vuepress/plugin-medium-zoom",
+    'fulltext-search'
   ]
 }
