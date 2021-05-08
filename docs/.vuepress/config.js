@@ -58,5 +58,8 @@ module.exports = {
       ]
     },
     displayAllHeaders: true
-  }
+  },
+  plugins: [
+    "@vuepress/plugin-medium-zoom"
+  ]
 }
