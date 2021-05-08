@@ -60,7 +60,8 @@ module.exports = {
     displayAllHeaders: true
   },
   plugins: [
-    "@vuepress/plugin-medium-zoom",
-    'fulltext-search'
+    "@vuepress/plugin-medium-zoom", //  大图查看插件
+    'fulltext-search',  //  全局搜索插件
+    '@vuepress/back-to-top' //  回到顶部插件
   ]
 }
