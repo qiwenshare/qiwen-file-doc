@@ -89,7 +89,7 @@ add_delete_log()
 # 生成日志
 print_log
 # 添加标题
-sed -i "1i # 前端更新日志\n" log.md
+sed -i "1i # 后台更新日志\n" log.md
 # 复制日志
 cp log.md ~/workspace/qiwen-file-doc/docs/log/backend.md
 # 删除日志文件
