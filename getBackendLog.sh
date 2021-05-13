@@ -79,7 +79,9 @@ add_delete_log()
   if [ -s ${year}-${month}.md ]
   then
     # 追加日志到 log.md 中
-    cat ${year}-${month}.md >> log.md
+    cat log.md > log_back.md
+    cat ${year}-${month}.md > log.md
+    cat log_back.md >> log.md
     # 写入月份
     sed -i "1i ### ${year}-${month}\n" log.md
   fi
@@ -94,5 +96,7 @@ sed -i "1i # 后台更新日志\n" log.md
 cp log.md ~/workspace/qiwen-file-doc/docs/log/backend.md
 # 删除日志文件
 rm log.md
+# 删除日志备份文件
+rm log_back.md
 # 切回到 qiwen-file-doc 路径
 cd ~/workspace/qiwen-file-doc
