@@ -1,8 +1,16 @@
 # 后台项目配置
 
-> 奇文网盘目前支持三种存储方式，本地磁盘存储、阿里云 OSS 存储及 FastDFS 存储，默认情况下是使用本地磁盘存储，那么如何切换到另外两种存储模式呢？下面进行详细介绍
 
-## 切换存储方式
+
+## 存储方式配置
+> 奇文网盘目前支持三种存储方式，本地磁盘存储、阿里云 OSS 存储及 FastDFS 存储，默认情况下是使用本地磁盘存储，那么如何切换到另外两种存储模式呢？
+### 本地磁盘存储    
+
+点击 resource 目录，打开 application.properties，将 ufo.storage-type 修改为 0
+
+```properties
+ufo.storage-type=0
+```
 
 ### 阿里云 OSS 存储
 
@@ -23,22 +31,22 @@
 
 #### 配置存储方式
 
-将 qiwen-file.storage-type 修改为 1
+将 ufo.storage-type 修改为 1
 
 ```properties
-qiwen-file.storage-type=1
+ufo.storage-type=1
 ```
 
 #### 配置阿里云 OSS 信息
 
 ```properties
 #阿里云oss基本配置
-qiwen-file.aliyun.oss.endpoint=
-qiwen-file.aliyun.oss.access-key-id=
-qiwen-file.aliyun.oss.access-key-secret=
-qiwen-file.aliyun.oss.bucket-name=
+ufo.aliyun.oss.endpoint=
+ufo.aliyun.oss.access-key-id=
+ufo.aliyun.oss.access-key-secret=
+ufo.aliyun.oss.bucket-name=
 #阿里云oss绑定域名
-qiwen-file.aliyun.oss.domain=
+ufo.aliyun.oss.domain=
 
 ```
 
@@ -46,12 +54,11 @@ qiwen-file.aliyun.oss.domain=
 
 | 属性                                    | 说明                                              | 参数示例                             |
 | --------------------------------------- | ------------------------------------------------- | ------------------------------------ |
-| qiwen-file.aliyun.oss.enabled           | 是否开启 OSS 对象存储                             | true/false                           |
-| qiwen-file.aliyun.oss.endpoint          | Endpoint 以杭州为例，其它 Region 请按实际情况填写 | https://oss-cn-hangzhou.aliyuncs.com |
-| qiwen-file.aliyun.oss.access-key-id     | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
-| qiwen-file.aliyun.oss.access-key-secret | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
-| qiwen-file.aliyun.oss.bucket-name       | bucketName                                        |                                      |
-| qiwen-file.aliyun.oss.domain            | 阿里云 oss 绑定域名                               |                                      |
+| ufo.aliyun.oss.endpoint          | Endpoint 以杭州为例，其它 Region 请按实际情况填写 | https://oss-cn-hangzhou.aliyuncs.com |
+| ufo.aliyun.oss.access-key-id     | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
+| ufo.aliyun.oss.access-key-secret | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
+| ufo.aliyun.oss.bucket-name       | bucketName                                        |                                      |
+| ufo.aliyun.oss.domain            | 阿里云 oss 绑定域名                               |                                      |
 
 ### FastDFS 存储
 
@@ -65,10 +72,10 @@ qiwen-file.aliyun.oss.domain=
 
 #### 配置存储方式
 
-将 qiwen-file.storage-type 修改为 1
+将 ufo.storage-type 修改为 2
 
 ```properties
-qiwen-file.storage-type=1
+ufo.storage-type=2
 ```
 
 #### FastDFS 配置
@@ -82,33 +89,34 @@ fdfs.thumb-image.height=150
 fdfs.tracker-list=127.0.0.1:22122
 ```
 
-## 配置文件保存路径
+## 文件保存路径配置
 
-### 开发环境配置
+### 开发环境默认保存路径
 
 当后台在开发工具中启动时，文件上传之后默认会保存到 target 目录下，这里我以 IDEA 为例，文件默认保存位置为 `target/classes/static/upload/`,如下图：
 
 ![image.png](https://www.qiwenshare.com/api/upload/20210410/3191618069690480.png)
 
-### 生产环境配置
+### 生产环境默认保存路径
 
 生产环境一般是将项目打包之后，放到服务器上运行，那么此时文件保存路径则在部署路径下的`static/upload/`下，如下图：
 ![image.png](https://www.qiwenshare.com/api/upload/20210410/69971618069856444.png)
 
 ### 修改文件保存位置
 
-奇文网盘默认保存文件是在服务器的 static 目录下保存文件，那么如何将文件保存在自定义路径下呢？其实很简单，操作如下：
+奇文网盘默认保存文件是在服务器的 static 目录下保存文件，那么如何将文件保存在自定义路径下呢？
 
 打开 resource/config 目录下的 application.properties 目录，并在该配置文件中添加如下属性：
 
 ```java
-qiwen-file.local-storage-path=D:/export
+ufo.local-storage-path=D:/export
 ```
+::: tip
 
-注意：
-该路径一旦配置则默认生效，整个服务器保存都会切换到该路径下
-如果该属性值为空或者该属性不存在，则系统默认保存文件到服务器的 static 目录下
+1. 该路径一旦配置则默认生效，整个服务器保存都会切换到该路径下，因此，如果你在使用的过程中修改该路径，那么则需要将之前路径下的文件迁移到新的路径，前端才可以正常访问。
+2. 如果该属性值为空或者该属性不存在，则系统默认保存文件到服务器的 static 目录下
 
+:::
 奇文网盘目前支持开发和生产环境两套配置，使用开发环境配置默认使用的是 H2 嵌入式数据库，使用生产环境配置连接 MySql 数据库。
 
 ## 开发/生产配置
@@ -172,3 +180,10 @@ spring.elasticsearch.rest.uris=127.0.0.1:9200
 
 不绑定域名也是可以的，但是网盘无法进行预览，建议创建一个子域名进行绑定。
 ![image.png](./img/backend/OssYuMing.png)
+
+### office文件预览失败
+
+office预览使用的是官方提供的预览方法，如果要实现预览，必须要满足如下两个条件：
+
+1. 项目必须部署在公网
+2. 项目必须配置域名
