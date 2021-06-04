@@ -30,7 +30,7 @@ windows 用户可以在根目录下双击 install.bat 文件，会自动打开�
 | stop.sh      | linux 停止脚本   |
 | winstart.bat | windows 启动脚本 |
 
-修改`qiwen-file/file-web/src/main/resources/config/application.properties`中的`server.port`为 8081，然后启动后台项目：
+修改`qiwen-file/src/main/resources/config/application.properties`中的`server.port`为 8081，然后启动后台项目：
 
 ```bash
 # 进入 release/bin 目录
