@@ -1,16 +1,74 @@
-# 后台项目配置
+# 配置
+
+> 奇文网盘目前支持三种存储方式，本地磁盘存储、阿里云 OSS 存储及 FastDFS 存储，默认情况下是使用本地磁盘存储，下面将介绍如何切换到另外两种存储模式。
+
+## 端口号配置
+
+项目中涉及到的端口号前后台都涉及，后台需要配置服务启动的端口号（如：8080），对前台而言，则需要配置连接后台服务的端口号（如：8080），这样请求才能连通。
+
+打开后台代码，进入 resource 目录，打开 application.properties配置文件，配置 `server.port` 属性
+
+```properties
+server.port=8080
+```
+
+打开前台代码，在 `/public/config.json` 文件中，需要配置连接后台服务的 baseUrl，如果后台服务启动在`http://localhost:8080`，那么这里就需要改成 `http://localhost:8080`
 
 
+## 上传路径配置
+
+奇文网盘默认保存文件是在服务器的 static 目录下保存文件，配置以下属性可以自定义文件保存路径。
+
+打开 resource/config 目录下的 application.properties 目录，并在该配置文件中添加如下属性：
+
+```java
+ufo.local-storage-path=D:/export
+```
+
+::: tip
+
+1. 该路径一旦配置则默认生效，整个服务器保存都会切换到该路径下，因此，如果你在使用的过程中修改该路径，那么则需要将之前路径下的文件迁移到新的路径，前端才可以正常访问。
+2. 如果该属性值为空或者该属性不存在，则系统默认保存文件到工程根路径下的 static 目录
+
+:::
+
+## 数据库配置
+
+### H2
+打开后台代码，进入 resource 目录，打开 application-dev.properties配置文件, 配置以下内容：
+
+```properties
+#jdbc连接-h2数据库
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.url = jdbc:h2:file:C:/ProgramData/QiwenNetDisk/file;MODE=MYSQL;DATABASE_TO_LOWER=TRUE
+spring.datasource.username=sa
+spring.datasource.password=
+spring.h2.console.enabled=true
+```
+
+
+### MySQL
+打开后台代码，进入 resource 目录，打开 application-prod.properties配置文件, 配置以下内容：
+
+```properties
+#jdbc连接-mysql数据库
+spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+spring.datasource.url = jdbc:mysql://localhost:3306/file?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+spring.datasource.username=root
+spring.datasource.password=
+```
 
 ## 存储方式配置
-> 奇文网盘目前支持三种存储方式，本地磁盘存储、阿里云 OSS 存储及 FastDFS 存储，默认情况下是使用本地磁盘存储，那么如何切换到另外两种存储模式呢？
 ### 本地磁盘存储    
 
-点击 resource 目录，打开 application.properties，将 ufo.storage-type 修改为 0
+#### 配置存储方式
+
+打开后台代码，进入 resource 目录，打开 application.properties配置文件，将 ufo.storage-type 修改为 0
 
 ```properties
 ufo.storage-type=0
 ```
+
 
 ### 阿里云 OSS 存储
 
@@ -25,13 +83,11 @@ ufo.storage-type=0
 
 ![image.png](./img/backend/createBucket.png)
 
-#### 奇文网盘配置
 
-点击 resource 目录，打开 application.properties，配置如下节点
 
 #### 配置存储方式
 
-将 ufo.storage-type 修改为 1
+打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，将 ufo.storage-type 修改为 1
 
 ```properties
 ufo.storage-type=1
@@ -45,8 +101,6 @@ ufo.aliyun.oss.endpoint=
 ufo.aliyun.oss.access-key-id=
 ufo.aliyun.oss.access-key-secret=
 ufo.aliyun.oss.bucket-name=
-#阿里云oss绑定域名
-ufo.aliyun.oss.domain=
 
 ```
 
@@ -54,11 +108,11 @@ ufo.aliyun.oss.domain=
 
 | 属性                                    | 说明                                              | 参数示例                             |
 | --------------------------------------- | ------------------------------------------------- | ------------------------------------ |
-| ufo.aliyun.oss.endpoint          | Endpoint 以杭州为例，其它 Region 请按实际情况填写 | https://oss-cn-hangzhou.aliyuncs.com |
+| ufo.aliyun.oss.endpoint          | Endpoint 以杭州为例，其它 Region 请按实际情况填写 | oss-cn-hangzhou.aliyuncs.com |
 | ufo.aliyun.oss.access-key-id     | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
 | ufo.aliyun.oss.access-key-secret | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
 | ufo.aliyun.oss.bucket-name       | bucketName                                        |                                      |
-| ufo.aliyun.oss.domain            | 阿里云 oss 绑定域名                               |                                      |
+
 
 ### FastDFS 存储
 
@@ -66,58 +120,24 @@ ufo.aliyun.oss.domain=
 
 略
 
-#### 奇文网盘配置
-
-点击 resource 目录，打开 application.properties，配置如下节点
-
 #### 配置存储方式
 
-将 ufo.storage-type 修改为 2
+打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，将 ufo.storage-type 修改为 2
 
 ```properties
 ufo.storage-type=2
 ```
 
-#### FastDFS 配置
+#### 配置FastDFS环境信息 
 
 ```properties
 #FastDFS配置
 fdfs.so-timeout=1501
 fdfs.connect-timeout=601
-fdfs.thumb-image.width=150
-fdfs.thumb-image.height=150
 fdfs.tracker-list=127.0.0.1:22122
 ```
 
-## 文件保存路径配置
 
-### 开发环境默认保存路径
-
-当后台在开发工具中启动时，文件上传之后默认会保存到 target 目录下，这里我以 IDEA 为例，文件默认保存位置为 `target/classes/static/upload/`,如下图：
-
-![image.png](https://www.qiwenshare.com/api/upload/20210410/3191618069690480.png)
-
-### 生产环境默认保存路径
-
-生产环境一般是将项目打包之后，放到服务器上运行，那么此时文件保存路径则在部署路径下的`static/upload/`下，如下图：
-![image.png](https://www.qiwenshare.com/api/upload/20210410/69971618069856444.png)
-
-### 修改文件保存位置
-
-奇文网盘默认保存文件是在服务器的 static 目录下保存文件，那么如何将文件保存在自定义路径下呢？
-
-打开 resource/config 目录下的 application.properties 目录，并在该配置文件中添加如下属性：
-
-```java
-ufo.local-storage-path=D:/export
-```
-::: tip
-
-1. 该路径一旦配置则默认生效，整个服务器保存都会切换到该路径下，因此，如果你在使用的过程中修改该路径，那么则需要将之前路径下的文件迁移到新的路径，前端才可以正常访问。
-2. 如果该属性值为空或者该属性不存在，则系统默认保存文件到服务器的 static 目录下
-
-:::
-奇文网盘目前支持开发和生产环境两套配置，使用开发环境配置默认使用的是 H2 嵌入式数据库，使用生产环境配置连接 MySql 数据库。
 
 ## 开发/生产配置
 
@@ -148,7 +168,8 @@ SPRING_PROFILES_ACTIVE="prod"
 
 #### 下载安装
 
-点击[官网下载](https://www.elastic.co/cn/downloads/elasticsearch)，根据自己的服务器类型，选择合适的安装包进行下载后安装
+1. 点击[官网下载](https://www.elastic.co/cn/downloads/elasticsearch)，根据自己的服务器类型，选择合适的安装包进行下载后安装
+2. 关注 **奇文社区** 公众号，回复 `qf` 即可获取奇文网盘一键启动包，及推荐的windows版本elasticsearch下载地址
 
 #### Windows 环境启动
 
@@ -170,20 +191,23 @@ spring.data.elasticsearch.client.reactive.endpoints=127.0.0.1:9200
 spring.elasticsearch.rest.uris=127.0.0.1:9200
 ```
 
+## 缩略图配置
+
+打开后台代码，进入 resource 目录，打开 `application.properties` 文件，在文件中修改如下脚本：
+```properties
+ufo.thumb-image.width=150
+ufo.thumb-image.height=150
+```
+
 ## FAQ
 
 ### 如何查看阿里云 API 密钥
 
 ![image.png](./img/backend/showAliyunAPIMiyao.png)
 
-### OSS 绑定域名
 
-不绑定域名也是可以的，但是网盘无法进行预览，建议创建一个子域名进行绑定。
-![image.png](./img/backend/OssYuMing.png)
+### 为什么不使用Office官方在线预览了
 
-### office文件预览失败
+官方Office在线预览是微软自家的东西，呈现效果比较完美，但是有一个致命性的约束，那就是只能使用文件真实路径url进行预览，这样不利于网盘内容的安全和私密性保护。
 
-office预览使用的是官方提供的预览方法，如果要实现预览，必须要满足如下两个条件：
-
-1. 项目必须部署在公网
-2. 项目必须配置域名
+因此权衡再三，暂时使用国产的officeweb365代替，该方案是目前预览的临时解决方案。

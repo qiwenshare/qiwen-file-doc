@@ -1,6 +1,6 @@
-# 部署说明
+# 部署
 
-如果是非编程人员，只想体验一下，且没有二次开发意愿的，可直接使用一键启动版本：[奇文网盘一键启动版本](https://www.qiwenshare.com/essay/detail/325)
+
 
 ## 环境要求
 
@@ -15,11 +15,13 @@
 
 ## 数据库配置
 
-奇文网盘开发环境默认支持 H2 数据库，如果想使用 MySQL 作为项目数据库，可将项目切换为生产环境配置，切换方法请参见：[奇文网盘开发和生产环境切换](https://www.qiwenshare.com/essay/detail/1132)
+奇文网盘在Windows环境下，默认启动数据库为自带的嵌入式数据库H2，在Linux环境下，默认使用的是MySQL数据库。
+
+H2默认是不需要配置的，如果使用MySQL需要配置数据库连接信息。当然使用哪种数据库也可以由你自己来决定，切换方法请参见：[奇文网盘开发和生产环境切换](https://www.qiwenshare.com/essay/detail/1132)
 
 ## 后台部署
 
-根目录下的 release 包是独立的，可以将它拷贝到任何具有 Java 环境的地方进行执行，release/bin 目录下有多个脚本文件，作用如下：
+在上一节，已经使用后台代码编译出来了 release 包，该发布包是独立的，可以将它拷贝到任何具有 Java 环境的地方进行执行，release/bin 目录下有多个脚本文件，作用如下：
 
 | 名称         | 描述             |
 | ------------ | ---------------- |
@@ -28,7 +30,8 @@
 | stop.sh      | linux 停止脚本   |
 | winstart.bat | windows 启动脚本 |
 
-### Windows 环境启动及停止
+
+#### Windows 环境启动及停止
 
 在 Windows 下点击 winstart.bat 之后会出现 Spring Boot 的启动黑窗口，这个窗口不能关闭，关闭就意味着程序结束，当出现如下字样，说明后台已经启动成功：
 
@@ -37,7 +40,7 @@ Tomcat started on port(s): 8081 (http) with context path ''
 Started FileApplication in 13.429 seconds (JVM running for 14.517)
 ```
 
-### Linux 环境启动及停止
+#### Linux 环境启动及停止
 
 在 Linux 环境下，默认使用的是生产环境配置，因此需要自建 MySQL 并进行配置，具体配置方法可查看[奇文网盘开发和生产环境切换](https://www.qiwenshare.com/topic/detail/6/1132)
 
@@ -60,7 +63,7 @@ chmod 777 *.sh
 
 ## 前端部署
 
-### 打包
+#### 打包
 
 在前端项目根目录下执行如下命令打包：
 
@@ -68,7 +71,7 @@ chmod 777 *.sh
 npm run build
 ```
 
-### Nginx 配置
+#### Nginx 配置
 
 打包后根目录下会生成文件夹 dist，将 dist 文件夹下的文件放置于 nginx/html 目录下，并配置 nginx/conf/nginx.conf，具体配置如下（不明白的小伙伴可以加入 **奇文社区 QQ 群：586207287** 共同探讨）：
 

@@ -10,12 +10,7 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
-      { text: '配置', 
-        items: [
-          { text: '前端 qiwen-file-web', link: '/config/frontend/' },
-          { text: '后台 qiwen-file', link: '/config/backend/' }
-        ]
-      },
+      { text: '配置',  link: '/config/backend/' },
       {
         text: '插件',
         items: [
@@ -43,13 +38,12 @@ module.exports = {
       '/guide/': [
         '',      /* /guide/ */
         'install', /* /guide/install.html */
-        'function', /* /guide/function.html */
         'deploying', /* /guide/deploying.html */
+        'function', /* /guide/function.html */
         'contact', /* /guide/contact.html */
         'thanks', /* /guide/thanks.html */
       ],
       '/config/': [
-        'frontend',      /* /config/frontend.html */
         'backend',      /* /config/backend.html */
       ],
       '/log/': [
