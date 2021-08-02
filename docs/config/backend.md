@@ -20,7 +20,7 @@ server.port=8080
 打开 resource/config 目录下的 application.properties 目录，并在该配置文件中添加如下属性：
 
 ```java
-ufo.local-storage-path=D:/export
+ufop.local-storage-path=D:/export
 ```
 
 ::: tip
@@ -61,12 +61,11 @@ spring.datasource.password=
 
 #### 配置存储方式
 
-打开后台代码，进入 resource 目录，打开 application.properties配置文件，将 ufo.storage-type 修改为 0
+打开后台代码，进入 resource 目录，打开 application.properties配置文件，将 ufop.storage-type 修改为 0
 
 ```properties
-ufo.storage-type=0
+ufop.storage-type=0
 ```
-
 
 ### 阿里云 OSS 存储
 
@@ -85,20 +84,20 @@ ufo.storage-type=0
 
 #### 配置存储方式
 
-打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，将 ufo.storage-type 修改为 1
+打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，将 ufop.storage-type 修改为 1
 
 ```properties
-ufo.storage-type=1
+ufop.storage-type=1
 ```
 
 #### 配置阿里云 OSS 信息
 
 ```properties
 #阿里云oss基本配置
-ufo.aliyun.oss.endpoint=
-ufo.aliyun.oss.access-key-id=
-ufo.aliyun.oss.access-key-secret=
-ufo.aliyun.oss.bucket-name=
+ufop.aliyun.oss.endpoint=
+ufop.aliyun.oss.access-key-id=
+ufop.aliyun.oss.access-key-secret=
+ufop.aliyun.oss.bucket-name=
 
 ```
 
@@ -106,10 +105,10 @@ ufo.aliyun.oss.bucket-name=
 
 | 属性                                    | 说明                                              | 参数示例                             |
 | --------------------------------------- | ------------------------------------------------- | ------------------------------------ |
-| ufo.aliyun.oss.endpoint          | Endpoint 以杭州为例，其它 Region 请按实际情况填写 | oss-cn-hangzhou.aliyuncs.com |
-| ufo.aliyun.oss.access-key-id     | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
-| ufo.aliyun.oss.access-key-secret | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
-| ufo.aliyun.oss.bucket-name       | bucketName                                        |                                      |
+| ufop.aliyun.oss.endpoint          | Endpoint 以杭州为例，其它 Region 请按实际情况填写 | oss-cn-hangzhou.aliyuncs.com |
+| ufop.aliyun.oss.access-key-id     | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
+| ufop.aliyun.oss.access-key-secret | 阿里云 API 的密钥                                 | **\*\*\*\***                         |
+| ufop.aliyun.oss.bucket-name       | bucketName                                        |                                      |
 
 
 ### FastDFS 存储
@@ -120,10 +119,10 @@ ufo.aliyun.oss.bucket-name=
 
 #### 配置存储方式
 
-打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，将 ufo.storage-type 修改为 2
+打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，将 ufop.storage-type 修改为 2
 
 ```properties
-ufo.storage-type=2
+ufop.storage-type=2
 ```
 
 #### 配置FastDFS环境信息 
@@ -193,8 +192,8 @@ spring.elasticsearch.rest.uris=127.0.0.1:9200
 
 打开后台代码，进入 resource 目录，打开 `application.properties` 文件，在文件中修改如下脚本：
 ```properties
-ufo.thumb-image.width=150
-ufo.thumb-image.height=150
+ufop.thumb-image.width=150
+ufop.thumb-image.height=150
 ```
 
 ## FAQ
@@ -203,9 +202,3 @@ ufo.thumb-image.height=150
 
 ![image.png](./img/backend/showAliyunAPIMiyao.png)
 
-
-### 为什么不使用Office官方在线预览了
-
-官方Office在线预览是微软自家的东西，呈现效果比较完美，但是有一个致命性的约束，那就是只能使用文件真实路径url进行预览，这样不利于网盘内容的安全和私密性保护。
-
-因此权衡再三，暂时使用国产的officeweb365代替，该方案是目前预览的临时解决方案。
