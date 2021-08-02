@@ -16,6 +16,7 @@ module.exports = {
         items: [
           { text: 'vue-simple-uploader', link: 'https://github.com/simple-uploader/vue-uploader/blob/master/README_zh-CN.md', target:'_blank'  },
           { text: 'vue-video-player', link: 'https://github.com/surmon-china/vue-video-player', target:'_blank'  },
+		  { text: 'ufop-spring-boot-starter', link: 'https://gitee.com/qiwen-cloud/ufop-spring-boot-starter', target:'_blank'  },
         ]
       },
       {
