@@ -128,9 +128,16 @@ ufop.storage-type=2
 #### 配置FastDFS环境信息 
 
 ```properties
-#FastDFS配置
-fdfs.so-timeout=1501
-fdfs.connect-timeout=601
+#读取时间
+fdfs.so-timeout=15000 
+#超时连接时间
+fdfs.connect-timeout=15000
+# 连接池最大数量
+fdfs.pool.max-total=200
+#单个tracker最大连接数
+fdfs.pool.max-total-per-key=50
+#连接耗尽最大等待时间 毫秒
+fdfs.pool.max-wait-millis=5000
 fdfs.tracker-list=127.0.0.1:22122
 ```
 
@@ -194,6 +201,27 @@ spring.elasticsearch.rest.uris=127.0.0.1:9200
 ```properties
 ufop.thumb-image.width=150
 ufop.thumb-image.height=150
+```
+
+## 在线编辑预览配置
+
+### 安装OnlyOffice Docs服务
+
+安装流程参见：[https://www.qiwenshare.com/essay/detail/1208](https://www.qiwenshare.com/essay/detail/1208)
+
+### 奇文网盘配置
+
+打开 `resource/config/application.properties`文件，配置当前网盘外网IP
+
+```properties
+# 当前部署外网IP，用于office文件编辑和预览
+deployment.host: 192.168.31.158:${server.port}
+```
+
+打开 `settings.properties` 文件，配置onlyoffice安装服务IP地址，如下：
+
+```properties
+files.docservice.url.site=http://192.168.31.158:80/
 ```
 
 ## FAQ
