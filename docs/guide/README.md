@@ -2,11 +2,10 @@
 
 ## 简介
 
-[奇文网盘](https://pan.qiwenshare.com/) 是一款基于 **Spring Boot 2 + VUE CLI@3** 框架开发的分布式文件管理系统，旨在为用户和企业提供一个简单、方便的文件存储方案，能够以完善的目录结构体系，对文件进行管理。
-
+[奇文网盘](https://pan.qiwenshare.com/) 是一款基于 **Spring Boot 2 + VUE CLI@3（Vue2）** 框架开发的分布式文件管理系统，旨在为用户和企业提供一个简单、方便的文件存储方案，能够以完善的目录结构体系，对文件进行管理。
 
 <p>
-  <a href="https://github.com/vuejs/vue" target="_blank" rel="noopener noreferrer">
+  <a target="_blank" href="https://github.com/vuejs/vue" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/vue-2.6.10-brightgreen.svg" alt="vue">
   </a>
 	<a target="_blank" href="https://baike.baidu.com/item/MIT%E8%AE%B8%E5%8F%AF%E8%AF%81/6671281?fr=aladdin">
@@ -16,11 +15,12 @@
 		<img src="https://img.shields.io/badge/JDK-8+-green.svg" />
 	</a>
 	<a target="_blank" href="https://gitee.com/mingSoft/MCMS/stargazers">
-		<img src="https://gitee.com/qiwen-cloud/qiwen-file/badge/star.svg?theme=dark" alt='gitee star'/>
+		<img src="https://gitee.com/qiwen-cloud/qiwen-file/badge/star.svg?theme=dark" alt='gitee star' style="height: 20px;"/>
+	</a>
+	<a href='https://gitee.com/qiwen-cloud/qiwen-file/members'>
+		<img src='https://gitee.com/qiwen-cloud/qiwen-file/badge/fork.svg?theme=dark' alt='fork' style="height: 20px;"></img>
 	</a>
 </p>
-
-
 
 ### 优势
 
@@ -30,11 +30,11 @@
 
 #### 技术选型
 
-使用业内最流行的Spring Boot 2 + VUE CLI@3 作为基础框架开发。
+使用业内最流行的 Spring Boot 2 + VUE CLI@3 作为基础框架开发。
 
 #### 跨平台
 
-可以将该系统部署到你的windows操作系统或者Linux操作系统。
+可以将该系统部署到你的 windows 操作系统或者 Linux 操作系统。
 
 #### 功能强大，使用简单
 
@@ -51,45 +51,45 @@
 ![网络拓扑图](./img/web-expand.png '屏幕截图.png')
 
 ### 功能概览
+
 #### 基础操作
-|操作|描述|
-|-|-|
-|文件创建|支持文件夹创建，Word, Excel, PPT 文档的创建|
-|文件删除|文件（支持批量），文件夹（支持批量）|
-|文件上传|文件上传（支持批量），文件夹上传，拖拽上传，粘贴截图上传|
-|文件重命名|文件、文件夹|
-|文件移动|文件（支持批量）、文件夹（支持批量）|
-|文件解压缩|ZIP、RAR|
-|文件预览|图像、文本（PDF、JSON、TXT、HTML等）、音乐、视频、Office文档（Word, Excel, PPT）|
-|文件分享|公开分享、私密分享（提取码）|
-|文件搜索|支持ElasticSearch|
+
+| 操作       | 描述                                                                               |
+| ---------- | ---------------------------------------------------------------------------------- |
+| 文件创建   | 支持文件夹创建，Word, Excel, PPT 文档的创建                                        |
+| 文件删除   | 文件（支持批量），文件夹（支持批量）                                               |
+| 文件上传   | 文件上传（支持批量），文件夹上传，拖拽上传，粘贴截图上传                           |
+| 文件重命名 | 文件、文件夹                                                                       |
+| 文件移动   | 文件（支持批量）、文件夹（支持批量）                                               |
+| 文件解压缩 | ZIP、RAR                                                                           |
+| 文件预览   | 图像、文本（PDF、JSON、TXT、HTML 等）、音乐、视频、Office 文档（Word, Excel, PPT） |
+| 文件分享   | 公开分享、私密分享（提取码）                                                       |
+| 文件搜索   | 支持 ElasticSearch                                                                 |
 
 #### 特色功能
-|功能|描述|
-|-|-|
-|文件分类查看|多文件格式分类查看，且支持网格，列表和时间线切换|
-|多种存储方式|基于奇文社区自研框架UFOP，实现文件多样化存储。<br/>目前支持本地存储、阿里云 OSS 对象存储, FastDFS 分布式存储|
-|支持分片上传|基于奇文社区自研框架UFOP, 实现文件分片上传。<br/>该功能同时支持本地存储、阿里云 OSS 对象存储, FastDFS 分布式存储|
-|支持极速秒传|判断文件md5，实现极速秒传效果，提高上传效率|
-|实时进度显示|上传文件前台实时显示上传文件进度，上传速率，百分比等信息|
-|存储容量显示|可实时显示文件存储占用情况及总占用容量|
-|在线编辑功能|提供Word, Excel, PPT 文档的创建，在线编辑，协同编辑功能|
 
-
+| 功能         | 描述                                                                                                              |
+| ------------ | ----------------------------------------------------------------------------------------------------------------- |
+| 文件分类查看 | 多文件格式分类查看，且支持网格，列表和时间线切换                                                                  |
+| 多种存储方式 | 基于奇文社区自研框架 UFOP，实现文件多样化存储。<br/>目前支持本地存储、阿里云 OSS 对象存储, FastDFS 分布式存储     |
+| 支持分片上传 | 基于奇文社区自研框架 UFOP, 实现文件分片上传。<br/>该功能同时支持本地存储、阿里云 OSS 对象存储, FastDFS 分布式存储 |
+| 支持极速秒传 | 判断文件 md5，实现极速秒传效果，提高上传效率                                                                      |
+| 实时进度显示 | 上传文件前台实时显示上传文件进度，上传速率，百分比等信息                                                          |
+| 存储容量显示 | 可实时显示文件存储占用情况及总占用容量                                                                            |
+| 在线编辑功能 | 提供 Word, Excel, PPT 文档的创建，在线编辑，协同编辑功能                                                          |
 
 ### 参与贡献
 
-代码目前仅托管在gitee。欢迎各路好汉一起来参与完善奇文网盘，我们期待你的 PR！
+代码目前仅托管在 gitee。欢迎各路好汉一起来参与完善奇文网盘，我们期待你的 PR！
 
 1.  Fork 本仓库（仓库地址见顶部导航栏）
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
 
-
 ## 快速开始
 
-由于项目是前后台分离的模式，因此编译和部署得花费一点时间，对于部分想快速体验的用户，我们制作了一个window环境下的一键启动包，解压就可以使用，不需要任何依赖，**当然你也可以跳过这一部分，从下一小节编译开始**。
+由于项目是前后台分离的模式，因此编译和部署得花费一点时间，对于部分想快速体验的用户，我们制作了一个 window 环境下的一键启动包，解压就可以使用，不需要任何依赖，**当然你也可以跳过这一部分，从下一小节编译开始**。
 
 #### 安装包获取
 
@@ -105,7 +105,7 @@
 
 #### 启动
 
-点击start.bat脚本启动项目
+点击 start.bat 脚本启动项目
 
 #### 停止
 
@@ -114,5 +114,3 @@
 #### 访问
 
 打开浏览器，访问 http://localhost:8080 , 即可启动项目
-
-

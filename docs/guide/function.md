@@ -30,7 +30,7 @@
 
 ### 布局调整功能
 
-左侧菜单栏可折叠，表格操作列可折叠，可控制当前表格中列的显示和隐藏
+左侧菜单栏可折叠，可控制当前表格中列的显示和隐藏
 
 ![折叠功能](./img/function/fold.gif)
 
@@ -38,7 +38,7 @@
 
 在网格模式和时间线模式下，支持手动调整图标大小：
 
-![图标大小调整](./img/function/adjustIconSize.png)
+![图标大小调整](./img/function/adjustIconSize.gif)
 
 ## 三种查看模式
 
@@ -64,13 +64,15 @@
 
 ## 文件操作
 
+文件操作结合了电脑客户端的操作方式，支持任何文件右键唤起操作列表，或勾选文件并点击顶部相关批量操作按钮。
+
 ### 新建文件夹
 
-![创建文件夹](./img/function/createFolder.png)
+![创建文件夹](./img/function/createFolder.gif)
 
 ### 文件移动
 
-支持单个和批量文件的移动，选择目录后，点击确定即可移动文件到目标路径，同时在弹框中提供新建文件夹功能。
+支持文件单个和批量移动，选择目录后，点击确定即可移动文件到目标路径，同时在弹框中提供新建文件夹功能。
 
 ![文件移动](./img/function/moveFile.gif)
 
@@ -94,16 +96,16 @@
 
 ## 三种文件上传方式
 
-### 文件分片上传
+### 文件 & 文件夹分片上传
 
-文件采用**分片上传**，集成了 [simiple-uplader](https://github.com/simple-uploader/Uploader/blob/develop/README_zh-CN.md#uploader) 的文件**秒传**、**断点续传**功能，此插件的具体配置项可以查看该项目的官方文档。
-![文件上传](./img/function/fileUpload.png)
+支持**文件**和**文件夹**上传。文件采用**分片上传**，集成了 [simiple-uplader](https://github.com/simple-uploader/Uploader/blob/develop/README_zh-CN.md#uploader) 的文件**秒传**、**断点续传**功能，此插件的具体配置项可以查看该项目的官方文档。
+![文件上传](./img/function/uploadFileAndFold.gif)
 
 ### 拖拽上传
 
 支持全屏区域拖拽上传文件。
 
-![文件拖拽上传](./img/function/dropUpload.png)
+![文件拖拽上传](./img/function/uploadFileDrop.gif)
 
 ### 截图粘贴上传
 
@@ -136,8 +138,8 @@
    粘贴分享链接及提取码效果：
 
    ```
-   分享链接：https://pan.qiwenshare.com/share/27d9b438019e4f68bcec02f579d163b7
-   提取码：356978
+   分享链接：https://pan.qiwenshare.com/share/3c6ca7bb39a0475a8d05b8441b22acf8
+   提取码：238285
    复制链接到浏览器中并输入提取码即可查看文件
    ```
 
@@ -151,13 +153,20 @@
 
 ![我的分享](./img/function/shareList.png)
 
-## 文件在线预览
+## 文件在线预览 & 编辑
 
-### office 在线预览
+### office 在线预览 & 编辑
+
+例如：word 文件在线预览：
+![文件在线预览](./img/function/preview.png)
+
+例如：word 文件在线编辑：
+![文件在线编辑](./img/function/edit.png)
 
 ::: tip
 
-office 文件必须在公网上可访问，才能使用 office 提供的在线预览功能
+本地启动时，office 文件在线预览需要在本地搭建 [only office](https://www.onlyoffice.com/) 服务；<br />
+线上部署时，office 文件在线预览需要在服务器上搭建 [only office](https://www.onlyoffice.com/) 服务；
 
 :::
 
