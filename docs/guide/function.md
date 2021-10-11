@@ -165,8 +165,8 @@
 
 ::: tip
 
-本地启动时，office 文件在线预览需要在本地搭建 [only office](https://www.onlyoffice.com/) 服务；<br />
-线上部署时，office 文件在线预览需要在服务器上搭建 [only office](https://www.onlyoffice.com/) 服务；
+本地启动时，office 文件在线预览需要在本地搭建 [only office](https://www.qiwenshare.com/essay/detail/1208) 服务；<br />
+线上部署时，office 文件在线预览需要在服务器上搭建 [only office](https://www.qiwenshare.com/essay/detail/1208) 服务；
 
 :::
 
