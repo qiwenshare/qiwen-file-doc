@@ -67,7 +67,7 @@ spring.datasource.password=
 ufop.storage-type=0
 ```
 
-### 阿里云 OSS 存储
+### 阿里云 OSS 对象存储
 
 #### 开通阿里云 OSS 对象存储
 
@@ -141,7 +141,45 @@ fdfs.pool.max-wait-millis=5000
 fdfs.tracker-list=127.0.0.1:22122
 ```
 
+### MinIO 存储
+#### 配置存储方式
 
+打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，将 ufop.storage-type 修改为 3
+
+```properties
+ufop.storage-type=3
+```
+
+#### 配置 MinIO 存储信息
+
+```properties
+#MinIO基本配置
+ufop.minio.endpoint=http://127.0.0.1:9000
+ufop.minio.access-key=
+ufop.minio.secret-key=
+ufop.minio.bucket-name=
+
+```
+### 七牛云KODO 对象存储
+
+#### 配置存储方式
+
+打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，将 ufop.storage-type 修改为 4
+
+```properties
+ufop.storage-type=4
+```
+
+#### 配置七牛云KODO存储信息
+
+```properties
+#七牛云Kodo配置
+ufop.qiniuyun.kodo.domain=
+ufop.qiniuyun.kodo.endpoint=
+ufop.qiniuyun.kodo.access-key=
+ufop.qiniuyun.kodo.secret-key=
+ufop.qiniuyun.kodo.bucket-name=
+```
 
 ## 开发/生产配置
 
