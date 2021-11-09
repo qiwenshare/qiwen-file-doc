@@ -2,16 +2,33 @@
 
 ## 端口号配置
 
-项目中涉及到的端口号前后台都涉及，后台需要配置服务启动的端口号（如：8080），对前台而言，则需要配置连接后台服务的端口号（如：8080），这样请求才能连通。
+项目中涉及到的端口号前端、后台都涉及。后台需要配置服务启动的端口号（如：8080），对前端而言，则需要配置连接后台服务的端口号（如：8080），这样请求才能连通。
 
-打开后台代码，进入 resource 目录，打开 application.properties配置文件，配置 `server.port` 属性
+- 对后台来说，进入 resource 目录，打开 application.properties配置文件，配置 `server.port` 属性
 
 ```properties
 server.port=8080
 ```
 
-打开前台代码，在 `/public/config.json` 文件中，需要配置连接后台服务的 baseUrl，如果后台服务启动在`http://localhost:8080`，那么这里就需要改成 `http://localhost:8080`
+- 对前端来说，在根目录下的 `vue.config.js` 文件中，需要配置连接后台服务的接口，如果后台服务启动在 `http://localhost:8080`，那么在 `devServer.proxy` 中的 `target` 就需要改成 `http://localhost:8080`
 
+```javascript
+devServer: {
+  disableHostCheck: true,
+  host: '0.0.0.0',
+  // 配置代理，解决本地开发环境下跨域请求后台接口的问题，proxy 中的修改项修改完后需要重启项目才可生效
+  proxy: {
+    '/api': {
+      target: 'http://localhost:8080', //  本地开发环境 - 连接后台接口
+      ws: true, //是否跨域
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': '/'
+      }
+    }
+  }
+}
+```
 
 ## 上传路径配置
 
