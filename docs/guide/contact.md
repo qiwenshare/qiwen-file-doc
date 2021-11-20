@@ -6,15 +6,17 @@
 
 <div style="display: flex; align-items: center;text-align: center;">
     <div style="margin-right: 32px;">
-        <img src="./img/contact/QQImg.png" style="width: 160px; height: 160px;"/>
-        <p>QQ 交流群</p>
+        <img src="./img/contact/QQImg1.png" style="width: 160px;"/>
     </div>
     <div style="margin-right: 32px;">
-        <img src="./img/contact/wechatImg.png" style="width: 160px; height: 160px;"/>
+        <img src="./img/contact/QQImg2.png" style="width: 160px;"/>
+    </div>
+    <div style="margin-right: 32px;">
         <p>微信公众号</p>
+        <img src="./img/contact/wechatImg.png" style="width: 160px; height: 160px;"/>
     </div>
     <div>
+        <p>Gitee 社区</p>
         <img src="./img/contact/giteeImg.png" style="width: 160px; height: 160px;"/>
-        <p>Gitee</p>
     </div>
 </div>
