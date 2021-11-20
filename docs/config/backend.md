@@ -32,8 +32,11 @@ devServer: {
 
 ## 上传路径配置
 
-奇文网盘默认保存文件是在服务器的 static 目录下保存文件，配置以下属性可以自定义文件保存路径。
+奇文网盘默认保存路径：
+  --开发环境：代码工程的下的 `/target/classes/static` 路径 
+  --生产环境：发布包下 `/static` 路径
 
+奇文网盘修该默认保存路径方法：
 打开 resource/config 目录下的 application.properties 目录，并在该配置文件中添加如下属性：
 
 ```java
