@@ -6,9 +6,6 @@
 
 <div style="display: flex; align-items: center;text-align: center;">
     <div style="margin-right: 32px;">
-        <img src="./img/contact/QQImg1.png" style="width: 160px;"/>
-    </div>
-    <div style="margin-right: 32px;">
         <img src="./img/contact/QQImg2.png" style="width: 160px;"/>
     </div>
     <div style="margin-right: 32px;">
@@ -20,3 +17,4 @@
         <img src="./img/contact/giteeImg.png" style="width: 160px; height: 160px;"/>
     </div>
 </div>
+
