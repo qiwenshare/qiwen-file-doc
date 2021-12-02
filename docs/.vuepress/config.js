@@ -10,7 +10,7 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
-      { text: '配置',  link: '/config/backend/' },
+      { text: '配置',  link: '/config/' },
       {
         text: '插件',
         items: [
@@ -45,7 +45,7 @@ module.exports = {
         'thanks', /* /guide/thanks.html */
       ],
       '/config/': [
-        'backend',      /* /config/backend.html */
+        '',      /* /config/ */
       ],
       '/log/': [
         'frontend',      /* /log/frontend.html */
