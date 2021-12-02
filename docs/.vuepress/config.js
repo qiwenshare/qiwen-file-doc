@@ -2,7 +2,7 @@ module.exports = {
   title: '奇文网盘',
   description: '一款功能齐全的文件管理系统',
   head: [
-    ['link', { rel: 'icon', href: 'QWshare.ico' }]
+    ['link', { rel: 'icon', href: '/QWshare.ico' }]
   ],
   base: '/docs/',
   themeConfig: {
