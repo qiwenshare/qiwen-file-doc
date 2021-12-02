@@ -74,6 +74,6 @@ npm run serve
 
 启动完成后会自动打开浏览器访问 [http://localhost:8081](http://localhost:8081/)， 你看到下面的页面就代表操作成功了。
 
-![首页](/img/guide/install/home.png '启动成功.png')
+<img :src="$withBase('/img/guide/install/home.png')" alt="启动成功">
 
 接下来你可以修改代码进行业务开发了，本项目内建了状态管理、全局路由等等各种实用的功能来辅助开发，你可以继续阅读和探索左侧的其它文档。
