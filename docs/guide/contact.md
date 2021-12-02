@@ -6,3 +6,9 @@
 
 <img src="/img/guide/contact/contactUs.png"/>
 
+项目的发展离不开你的支持，如果觉得这个项目帮助到了你，请点击下方 Gitee 链接移步 qiwen-file 工程页面底部，请作者喝杯咖啡吧！
+
+链接：[qiwen-file](https://gitee.com/qiwen-cloud/qiwen-file#tree_comm_title)
+
+![image-20211202134211348](/img/guide/contact/agree.png)
+
