@@ -6,13 +6,13 @@
 
 注册页面提供滑动解锁插件，在输入用户名、手机号、密码之后，点击注册就可以注册成功。
 
-![注册](/img/guide/function/register.png)
+<img :src="$withBase('/img/guide/function/register.png')" alt="注册">
 
 ## 登录
 
 输入手机号和密码，滑动解锁，点击登录按钮即可登录
 
-![登录](/img/guide/function/login.png)
+<img :src="$withBase('/img/guide/function/login.png')" alt="登录">
 
 ## 网盘主页
 
@@ -29,25 +29,25 @@
 - 中间面包屑导航栏：标识当前位于的目录。点击层级，可以回到任意一层目录；**点击面包屑导航栏后面的空白处，可以手动输入路径以便快速进入指定目录**。
 - 右侧文件展示区域：展示形式会随文件查看模式而改变；底部分页组件。
 
-![网盘主页](/img/guide/function/home.png)
+<img :src="$withBase('/img/guide/function/home.png')" alt="网盘主页">
 
 ### 布局调整功能
 
 左侧菜单栏可折叠，可控制当前表格中列的显示和隐藏
 
-![折叠功能](/img/guide/function/fold.gif)
+<img :src="$withBase('/img/guide/function/fold.gif')" alt="折叠功能">
 
 ### 文件图标大小调整
 
 在网格模式和时间线模式下，支持手动调整图标大小：
 
-![图标大小调整](/img/guide/function/adjustIconSize.gif)
+<img :src="$withBase('/img/guide/function/adjustIconSize.gif')" alt="图标大小调整">
 
 ## 路径导航
 
 点击目录跳转到该文件夹内部，在面包屑导航栏后面空白处点击，可以**输入路径**，快速到达指定路径（此功能仅支持在 **我的文件 - 全部** 分类下使用）
 
-![图标大小调整](/img/guide/function/breadCrumb.gif)
+<img :src="$withBase('/img/guide/function/breadCrumb.gif')" alt="路径导航">
 
 ## 三种查看模式
 
@@ -61,15 +61,15 @@
 
 ### 列表模式
 
-![列表模式](/img/guide/function/list.png)
+<img :src="$withBase('/img/guide/function/list.png')" alt="列表模式">
 
 ### 网格模式
 
-![网格模式](/img/guide/function/grid.png)
+<img :src="$withBase('/img/guide/function/grid.png')" alt="网格模式">
 
 ### 时间线模式
 
-![时间线模式](/img/guide/function/timeline.png)
+<img :src="$withBase('/img/guide/function/timeline.png')" alt="时间线模式">
 
 ## 文件操作
 
@@ -77,13 +77,13 @@
 
 ### 新建文件夹
 
-![创建文件夹](/img/guide/function/createFolder.gif)
+<img :src="$withBase('/img/guide/function/createFolder.gif')" alt="创建文件夹">
 
 ### 文件移动
 
 支持文件单个和批量移动，选择目录后，点击确定即可移动文件到目标路径，同时在弹框中提供新建文件夹功能。
 
-![文件移动](/img/guide/function/moveFile.gif)
+<img :src="$withBase('/img/guide/function/moveFile.gif')" alt="文件移动">
 
 ### 文件在线解压缩
 
@@ -93,44 +93,44 @@
 2. 解压到以当前压缩文件命名的文件夹内
 3. 解压到指定文件夹
 
-![文件在线解压缩](/img/guide/function/unzip.gif)
+<img :src="$withBase('/img/guide/function/unzip.gif')" alt="文件在线解压缩">
 
 ### 文件搜索
 
 支持文件名搜索文件，搜索功能后台配置请查看顶部导航栏`配置-后台项目配置-文件搜索配置`
 
-![文件搜索](/img/guide/function/search.gif)
+<img :src="$withBase('/img/guide/function/search.gif')" alt="文件搜索">
 
 ### 批量操作功能
 
 在列表和网格模式下，提供了批量操作功能，可以对文件进行批量删除、移动和下载。
 
-![批量操作](/img/guide/function/batch.gif)
+<img :src="$withBase('/img/guide/function/batch.gif')" alt="批量操作">
 
 ## 三种文件上传方式
 
 ### 文件 & 文件夹分片上传
 
 支持**文件**和**文件夹**上传。文件采用**分片上传**，集成了 [simiple-uplader](https://github.com/simple-uploader/Uploader/blob/develop/README_zh-CN.md#uploader) 的文件**秒传**、**断点续传**功能，此插件的具体配置项可以查看该项目的官方文档。
-![文件上传](/img/guide/function/uploadFileAndFold.gif)
+<img :src="$withBase('/img/guide/function/uploadFileAndFold.gif')" alt="文件上传">
 
 ### 拖拽上传
 
 支持全屏区域拖拽上传文件。
 
-![文件拖拽上传](/img/guide/function/uploadFileDrop.gif)
+<img :src="$withBase('/img/guide/function/uploadFileDrop.gif')" alt="文件拖拽上传">
 
 ### 截图粘贴上传
 
 直接使用任何截图工具截图后，在拖拽区域使用 Ctrl + V 粘贴图片，点击上传图片即可上传。
 
-![截图粘贴上传](/img/guide/function/pasteUpload.png)
+<img :src="$withBase('/img/guide/function/pasteUpload.png')" alt="截图粘贴上传">
 
 ## 文件回收站
 
 提供文件回收站功能，支持彻底删除和还原文件。
 
-![文件回收站](/img/guide/function/recycle.png)
+<img :src="$withBase('/img/guide/function/recycle.png')" alt="文件回收站">
 
 ## 文件分享
 
@@ -138,15 +138,15 @@
 
 1. 支持单个和批量分享文件给他人：
 
-   ![单个或批量分享文件](/img/guide/function/share.png)
+   <img :src="$withBase('/img/guide/function/share.png')" alt="单个或批量分享文件">
 
 2. 可以选择过期时间和是否需要提取码：
 
-   ![过期时间和是否需要提取码](/img/guide/function/selectDate.png)
+   <img :src="$withBase('/img/guide/function/selectDate.png')" alt="过期时间和是否需要提取码">
 
 3. 提供快捷复制链接及提取码给他人：
 
-   ![生成分享链接](/img/guide/function/copyLink.png)
+   <img :src="$withBase('/img/guide/function/copyLink.png')" alt="生成分享链接">
 
    粘贴分享链接及提取码效果：
 
@@ -158,23 +158,23 @@
 
 4. 他人查看分享内容，并支持保存到网盘功能：
 
-   ![查看他人分享](/img/guide/function/saveShareFile.png)
+   <img :src="$withBase('/img/guide/function/saveShareFile.png')" alt="查看他人分享">
 
 ### 查看已分享过的文件列表
 
 支持在列表中快捷复制当次的分享链接及提取码，并标注分享时间和过期状态：
 
-![我的分享](/img/guide/function/shareList.png)
+<img :src="$withBase('/img/guide/function/shareList.png')" alt="我的分享">
 
 ## 文件在线预览 & 编辑
 
 ### office 在线预览 & 编辑
 
 例如：word 文件在线预览：
-![文件在线预览](/img/guide/function/preview.png)
+<img :src="$withBase('/img/guide/function/preview.png')" alt="文件在线预览">
 
 例如：word 文件在线编辑：
-![文件在线编辑](/img/guide/function/edit.png)
+<img :src="$withBase('/img/guide/function/edit.png')" alt="文件在线编辑">
 
 ::: tip
 
@@ -189,10 +189,10 @@
 
 视频播放器使用了 [vue-video-player](https://github.com/surmon-china/vue-video-player) ，具体配置项请查看该项目的官方文档，外层播放列表和操作栏为自行封装的。
 
-![视频在线预览](/img/guide/function/video.png)
+<img :src="$withBase('/img/guide/function/video.png')" alt="视频在线预览">
 
 ### 音频在线播放
 
 MP3 格式的文件支持在线播放。
 
-![音频在线播放](/img/guide/function/audio.png)
+<img :src="$withBase('/img/guide/function/audio.png')" alt="音频在线播放">

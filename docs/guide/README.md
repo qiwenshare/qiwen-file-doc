@@ -1,4 +1,4 @@
-# 快速入手
+# 项目介绍
 
 ## 简介
 
@@ -48,7 +48,7 @@
 
 分布式的架构设计，可以为你的网盘开启无限的扩展空间，网络拓扑图如下：
 
-![网络拓扑图](/img/guide/web-expand.png '屏幕截图.png')
+<img :src="$withBase('/img/guide/web-expand.png')" alt="网络拓扑图">
 
 ### 功能概览
 
@@ -123,6 +123,6 @@
 
 联手蓝桥云课，打造了奇文网盘基础功能从 0 开始教程：[经典项目：前后端分离网盘系统实战](https://www.lanqiao.cn/courses/)
 
-![蓝桥云课](/img/guide/lanqiao.png)
+<img :src="$withBase('/img/guide/lanqiao.png')" alt="蓝桥云课 海报">
 
-![蓝桥云课](/img/guide/project.png)
+<img :src="$withBase('/img/guide/project.png')" alt="蓝桥云课 课程思维导图">

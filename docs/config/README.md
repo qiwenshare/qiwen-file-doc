@@ -98,7 +98,7 @@ ufop.storage-type=0
 点击进入 OSS 管理控制台，创建 bucket
 创建完成之后，点击 bucket 列表目录，进入到概览页面
 
-![image.png](/img/config/createBucket.png)
+<img :src="$withBase('/img/config/createBucket.png')" alt="bucket">
 
 
 
@@ -207,7 +207,7 @@ ufop.qiniuyun.kodo.bucket-name=
 
 ### 环境切换 dev/prod
 
-![image.png](/img/config/environment.png)
+<img :src="$withBase('/img/config/environment.png')" alt="环境">
 
 ### 生产配置
 
@@ -222,7 +222,7 @@ SPRING_PROFILES_ACTIVE="prod"
 
 在开发及生产环境，如果使用 H2 数据库，需要注意 H2 数据库文件保存路径是否存在，根据实际需要进行调整，具体修改位置为，`application-dev.properties` 文件，修改如下图路径：
 
-![image.png](/img/config/environmentDev.png)
+<img :src="$withBase('/img/config/environmentDev.png')" alt="开发环境">
 
 ## 文件搜索配置
 
@@ -286,5 +286,5 @@ files.docservice.url.site=http://192.168.31.158:80/
 
 ### 如何查看阿里云 API 密钥
 
-![image.png](/img/config/showAliyunAPIMiyao.png)
+<img :src="$withBase('/img/config/showAliyunAPIMiyao.png')" alt="网络拓扑图">
 
