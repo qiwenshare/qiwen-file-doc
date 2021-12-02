@@ -75,7 +75,7 @@ npm run build
 
 #### Nginx 配置
 
-打包后根目录下会生成文件夹 dist，将 dist 文件夹下的文件放置于 nginx/html 目录下，并配置 nginx/conf/nginx.conf，具体配置如下（不明白的小伙伴可以加入 **奇文社区 QQ 群：586207287** 共同探讨）：
+打包后根目录下会生成文件夹 dist，将 dist 文件夹下的文件放置于 nginx/html 目录下，并配置 nginx/conf/nginx.conf，具体配置如下：
 
 ```bash
  server {

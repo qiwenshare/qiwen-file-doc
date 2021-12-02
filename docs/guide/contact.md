@@ -4,5 +4,5 @@
 
 **QQ 交流群**、**微信公众号**或 **Gitee** 请扫描下面二维码
 
-<img src="./img/contact/contactUs.png"/>
+<img src="/img/guide/contact/contactUs.png"/>
 
