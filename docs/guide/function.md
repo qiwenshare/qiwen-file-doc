@@ -196,3 +196,12 @@
 MP3 格式的文件支持在线播放。
 
 <img :src="$withBase('/img/guide/function/audio.png')" alt="音频在线播放">
+
+## 移动端支持
+
+除过在线编辑之外，其他的功能均支持在移动端操作，下面视频中简单演示了几种操作：
+
+<video width="100%" height="auto" controls>
+  <source :src="$withBase('/video/guide/function//mobileOperate.mp4')"  type="video/mp4">
+  您的浏览器不支持 HTML5 video 标签。
+</video>
