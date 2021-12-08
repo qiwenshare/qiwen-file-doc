@@ -7,7 +7,7 @@ actionText: 快速上手 →
 actionLink: /guide/install.html
 features:
 - title: 多种存储方式
-  details: 使用奇文社区自研框架 ufo，支持本地磁盘、阿里云 OSS 对象存储、FastDFS 存储、MinIO 存储、七牛云 KODO 对象存储
+  details: 使用奇文社区自研框架 ufop ( https://gitee.com/qiwen-cloud/ufop-spring-boot-starter ) ，支持本地磁盘、阿里云 OSS 对象存储、FastDFS 存储、MinIO 存储、七牛云 KODO 对象存储，切换方式查看顶部导航栏：配置 - 存储方式配置
 - title: 分片、断点续传及极速秒传
   details: 集成 vue-simple-uploader，实现文件分片上传，提高上传速度；准确识别已上传文件，达到秒传效果，以分片为维度，可实现断点续传
 - title: 在线编辑文档
