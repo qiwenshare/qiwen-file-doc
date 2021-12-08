@@ -23,7 +23,8 @@ module.exports = {
         text: '仓库地址',
         items: [
           { text: '前端 qiwen-file-web', link: 'https://gitee.com/qiwen-cloud/qiwen-file-web', target:'_blank' },
-          { text: '后台 qiwen-file', link: 'https://gitee.com/qiwen-cloud/qiwen-file', target:'_blank' }
+          { text: '后台 qiwen-file', link: 'https://gitee.com/qiwen-cloud/qiwen-file', target:'_blank' },
+          { text: '本说明文档 qiwen-file-doc', link: 'https://gitee.com/qiwen-cloud/qiwen-file-doc', target:'_blank' }
         ]
       },
       { text: '演示地址', link: 'https://pan.qiwenshare.com/', target:'_blank' },
@@ -52,7 +53,8 @@ module.exports = {
         'backend',      /* /log/backend.html */
       ]
     },
-    displayAllHeaders: true
+    displayAllHeaders: true,
+    lastUpdated: '最近更新时间' // 页面更新时间
   },
   plugins: [
     "@vuepress/plugin-medium-zoom", //  大图查看插件
