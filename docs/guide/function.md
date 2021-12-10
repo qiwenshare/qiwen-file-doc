@@ -183,6 +183,20 @@
 
 :::
 
+### markdown 在线预览 & 编辑
+
+支持 **markdown** 文件在线预览、编辑、保存功能，集成 [mavon-editor](https://www.npmjs.com/package/mavon-editor) ，已内置到前端工程中
+
+<img :src="$withBase('/img/guide/function/markdown.png')" alt="mavon-editor 代码编辑器">
+
+### 代码类文件在线预览 & 编辑
+
+支持 **C、C++、C#、Java、JavaScript、HTML、CSS、Less、Sass、Stylus ……** 等常用代码类文件的在线预览、编辑、保存
+
+集成 [vue-codemirror](https://github.com/surmon-china/vue-codemirror)，已内置到前端工程中，可参考 [codemirror](https://codemirror.net/index.html) 官网说明添加更多语言
+
+<img :src="$withBase('/img/guide/function/codemirror.png')" alt="codemirror 代码编辑器">
+
 ### 视频在线预览
 
 文件类型为视频时，点击即可打开预览窗口，展示播放列表，支持快进、后退、暂停、倍速播放、全屏播放、下载视频和折叠播放列表。

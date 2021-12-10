@@ -44,6 +44,8 @@
 
 目前已经支持 Word, Excel，PPT 在线编辑，协同编辑功能。
 
+已支持 **markdown、C、C++、C#、Java、JavaScript、HTML、CSS、Less、SCSS、SASS、Stylus** …… 等其他代码类文件的**在线预览和编辑**
+
 #### 移动端支持
 
 最新版本已做了移动端界面适配，兼容常用文件操作。
@@ -73,18 +75,20 @@
 
 #### 特色功能
 
-| 功能         | 描述                                                         |
-| ------------ | ------------------------------------------------------------ |
-| 在线编辑功能 | Word、Excel、PowerPoint 文档的在线创建、**在线编辑**、协同编辑功能<br />集成 [OnlyOffice](https://api.onlyoffice.com/)，安装方式参考 [安装 ONLYOFFICE](https://www.qiwenshare.com/essay/detail/1208) |
-| 文件分类查看 | 图片、视频、音乐、文档、其他，分类查看更快捷                 |
-| 多种查看模式 | 支持网格模式、列表模式、时间线模式<br />网格模式下图标支持手动控制显示大小 |
-| 回收站       | 删除文件自动移入回收站，支持在回收站中彻底删除、还原文件     |
-| 多种存储方式 | 基于奇文社区自研框架 [UFOP](https://gitee.com/qiwen-cloud/ufop-spring-boot-starter)，实现文件多样化存储。<br/>支持**本地**磁盘、**阿里云 OSS** 对象存储、**FastDFS** 存储、**MinIO** 存储、<br />**七牛云 KODO** 对象存储，点击查看配置方式[存储方式配置](/config/#存储方式配置) |
-| 支持分片上传 | 基于奇文社区自研框架 [UFOP](https://gitee.com/qiwen-cloud/ufop-spring-boot-starter), 实现文件分片上传。<br />集成优秀开源项目 [vue-simple-uploader](https://github.com/simple-uploader/vue-uploader/blob/master/README_zh-CN.md) |
-| 支持极速秒传 | 计算文件 MD5，实现极速秒传效果，提高上传效率                 |
-| 支持断点续传 | 同一个文件，当上传过程中网络中断，可以从断点处继续上传       |
-| 实时进度显示 | 页面实时显示上传文件进度、速度、结果等信息                   |
-| 存储容量显示 | 可实时显示文件存储占用情况及总存储容量                       |
+| 功能              | 描述                                                         |
+| ----------------- | ------------------------------------------------------------ |
+| office 在线编辑   | Word、Excel、PowerPoint 文档的在线创建、**在线编辑**、协同编辑功能<br />集成 [OnlyOffice](https://api.onlyoffice.com/)，安装方式参考 [安装 ONLYOFFICE](https://www.qiwenshare.com/essay/detail/1208) |
+| markdown 在线编辑 | 支持 **markdown** 文件在线预览、编辑、保存功能<br />集成 [mavon-editor](https://www.npmjs.com/package/mavon-editor) ，已内置到前端工程中 |
+| 代码在线编辑      | 支持 **C、C++、C#、Java、JavaScript、HTML、CSS、Less、Sass、Stylus**  <br />等常用代码类文件的在线预览、编辑、保存<br />集成 [vue-codemirror](https://github.com/surmon-china/vue-codemirror)，已内置到前端工程中，<br />可参考 [codemirror](https://codemirror.net/index.html) 官网说明添加更多语言 |
+| 文件分类查看      | 图片、视频、音乐、文档、其他，分类查看更快捷                 |
+| 多种查看模式      | 支持网格模式、列表模式、时间线模式<br />网格模式下图标支持手动控制显示大小 |
+| 回收站            | 删除文件自动移入回收站，支持在回收站中彻底删除、还原文件     |
+| 多种存储方式      | 基于奇文社区自研框架 [UFOP](https://gitee.com/qiwen-cloud/ufop-spring-boot-starter)，实现文件多样化存储。<br/>支持**本地**磁盘、**阿里云 OSS** 对象存储、**FastDFS** 存储、**MinIO** 存储、<br />**七牛云 KODO** 对象存储，点击查看配置方式[存储方式配置](/config/#存储方式配置) |
+| 支持分片上传      | 基于奇文社区自研框架 [UFOP](https://gitee.com/qiwen-cloud/ufop-spring-boot-starter), 实现文件分片上传。<br />集成优秀开源项目 [vue-simple-uploader](https://github.com/simple-uploader/vue-uploader/blob/master/README_zh-CN.md) |
+| 支持极速秒传      | 计算文件 MD5，实现极速秒传效果，提高上传效率                 |
+| 支持断点续传      | 同一个文件，当上传过程中网络中断，可以从断点处继续上传       |
+| 实时进度显示      | 页面实时显示上传文件进度、速度、结果等信息                   |
+| 存储容量显示      | 可实时显示文件存储占用情况及总存储容量                       |
 
 ### 参与贡献
 
