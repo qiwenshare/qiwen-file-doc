@@ -207,17 +207,11 @@ ufop.qiniuyun.kodo.bucket-name=
 
 ### 环境切换 dev/prod
 
-<img :src="$withBase('/img/config/environment.png')" alt="环境">
-
-### 生产配置
-
-当发布版本之后，在环境上如果需要对环境进行切换，可修改如下配置：
-打开 bin 路径下 `start.sh` 文件，设置如下配置项，即可进行切换：
-
-```shell
-SPRING_PROFILES_ACTIVE="prod"
+打开后台代码，进入 resource 目录，打开 `application.properties` 配置文件，修改如下配置文件:
+```properties
+#环境切换 dev/prod
+spring.profiles.active=prod
 ```
-
 ### 注意事项
 
 在开发及生产环境，如果使用 H2 数据库，需要注意 H2 数据库文件保存路径是否存在，根据实际需要进行调整，具体修改位置为，`application-dev.properties` 文件，修改如下图路径：
@@ -273,7 +267,7 @@ ufop.thumb-image.height=150
 
 ```properties
 # 当前部署外网IP，用于office文件编辑和预览
-deployment.host: 192.168.31.158:${server.port}
+deployment.host: 192.168.31.158
 ```
 
 打开 `settings.properties` 文件，配置onlyoffice安装服务IP地址，如下：
