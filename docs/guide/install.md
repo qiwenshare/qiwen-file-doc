@@ -59,7 +59,7 @@ npm run build
 
 #### 开发环境运行
 
-修改`public/config.json`中`baseUrl`的端口修改为后台项目的端口（例如前述的 8081 端口），然后启动：
+修改根目录下`vue.config.js`中`devServer.proxy.target`的端口修改为后台项目的端口（例如前述的 8081 端口），然后启动：
 
 ```bash
 # 本地开发 启动项目
@@ -68,7 +68,7 @@ npm run serve
 
 ::: tip
 
-每次修改完`public/config.json`中的`baseUrl`，都需要重新启动项目
+每次修改完`vue.config.js`中的配置项，都需要重新启动项目才会生效
 
 :::
 
