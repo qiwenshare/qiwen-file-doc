@@ -12,6 +12,7 @@ module.exports = {
       { text: '指南', link: '/guide/' },
       { text: '配置',  link: '/config/' },
       { text: '常见问题(FAQ)', link: '/question/' },
+      { text: '联系 & 支持', link: '/support/' },
       {
         text: '插件',
         items: [
@@ -45,14 +46,15 @@ module.exports = {
         'install', /* /guide/install.html */
         'deploying', /* /guide/deploying.html */
         'function', /* /guide/function.html */
-        'contact', /* /guide/contact.html */
-        'thanks', /* /guide/thanks.html */
       ],
       '/config/': [
         '',      /* /config/ */
       ],
       '/question/': [
         '',      /* /question/ */
+      ],
+      '/support/': [
+        '',      /* /support/ */
       ],
       '/log/': [
         'frontend',      /* /log/frontend.html */
