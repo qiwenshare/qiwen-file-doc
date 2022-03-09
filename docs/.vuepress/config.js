@@ -12,22 +12,28 @@ module.exports = {
       { text: '指南', link: '/guide/' },
       { text: '配置',  link: '/config/' },
       { text: '常见问题(FAQ)', link: '/question/' },
+      { text: '联系 & 支持', link: '/support/' },
       {
-        text: '插件',
+        text: '资源列表',
         items: [
-          { text: 'vue-simple-uploader', link: 'https://github.com/simple-uploader/vue-uploader/blob/master/README_zh-CN.md', target:'_blank' },
-          { text: 'vue-video-player', link: 'https://github.com/surmon-china/vue-video-player', target:'_blank' },
-          { text: 'ufop-spring-boot-starter', link: 'https://gitee.com/qiwen-cloud/ufop-spring-boot-starter', target:'_blank' },
-          { text: 'mavon-editor', link: 'https://www.npmjs.com/package/mavon-editor', target:'_blank' },
-          { text: 'vue-codemirror', link: 'https://github.com/surmon-china/vue-codemirror', target:'_blank' }
-        ]
-      },
-      {
-        text: '仓库地址',
-        items: [
-          { text: '前端 qiwen-file-web', link: 'https://gitee.com/qiwen-cloud/qiwen-file-web', target:'_blank' },
-          { text: '后台 qiwen-file', link: 'https://gitee.com/qiwen-cloud/qiwen-file', target:'_blank' },
-          { text: '本说明文档 qiwen-file-doc', link: 'https://gitee.com/qiwen-cloud/qiwen-file-doc', target:'_blank' }
+          {
+            text: '插件',
+            items: [
+              { text: 'vue-simple-uploader', link: 'https://github.com/simple-uploader/vue-uploader/blob/master/README_zh-CN.md', target:'_blank' },
+              { text: 'vue-video-player', link: 'https://github.com/surmon-china/vue-video-player', target:'_blank' },
+              { text: 'ufop-spring-boot-starter', link: 'https://gitee.com/qiwen-cloud/ufop-spring-boot-starter', target:'_blank' },
+              { text: 'mavon-editor', link: 'https://www.npmjs.com/package/mavon-editor', target:'_blank' },
+              { text: 'vue-codemirror', link: 'https://github.com/surmon-china/vue-codemirror', target:'_blank' }
+            ]
+          },
+          {
+            text: '仓库地址',
+            items: [
+              { text: '前端 qiwen-file-web', link: 'https://gitee.com/qiwen-cloud/qiwen-file-web', target:'_blank' },
+              { text: '后台 qiwen-file', link: 'https://gitee.com/qiwen-cloud/qiwen-file', target:'_blank' },
+              { text: '本说明文档 qiwen-file-doc', link: 'https://gitee.com/qiwen-cloud/qiwen-file-doc', target:'_blank' }
+            ]
+          }
         ]
       },
       { text: '演示地址', link: 'https://pan.qiwenshare.com/', target:'_blank' },
@@ -45,14 +51,15 @@ module.exports = {
         'install', /* /guide/install.html */
         'deploying', /* /guide/deploying.html */
         'function', /* /guide/function.html */
-        'contact', /* /guide/contact.html */
-        'thanks', /* /guide/thanks.html */
       ],
       '/config/': [
         '',      /* /config/ */
       ],
       '/question/': [
         '',      /* /question/ */
+      ],
+      '/support/': [
+        '',      /* /support/ */
       ],
       '/log/': [
         'frontend',      /* /log/frontend.html */
