@@ -11,6 +11,7 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
       { text: '配置',  link: '/config/' },
+      { text: '问题中心', link: '/question/' },
       {
         text: '插件',
         items: [
@@ -49,6 +50,9 @@ module.exports = {
       ],
       '/config/': [
         '',      /* /config/ */
+      ],
+      '/question/': [
+        '',      /* /question/ */
       ],
       '/log/': [
         'frontend',      /* /log/frontend.html */
