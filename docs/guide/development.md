@@ -6,7 +6,7 @@
 
 <img :src="$withBase('/img/guide/development/development1.png')" alt="运行成功">
 
-## 前台
+## 前端
 修改根目录下`vue.config.js`中`devServer.proxy.target`的端口修改为后台项目的端口（例如前述的 8081 端口），然后启动：
 
 ```bash
