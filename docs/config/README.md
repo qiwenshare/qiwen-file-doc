@@ -52,21 +52,7 @@ ufop.local-storage-path=D:/export
 
 ## 数据库配置
 
-### H2
-打开后台代码，进入 resource 目录，打开 application-dev.properties配置文件, 配置以下内容：
-
-```properties
-#jdbc连接-h2数据库
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.url = jdbc:h2:file:C:/ProgramData/QiwenNetDisk/file;MODE=MYSQL;DATABASE_TO_LOWER=TRUE
-spring.datasource.username=sa
-spring.datasource.password=
-spring.h2.console.enabled=true
-```
-
-
-### MySQL
-打开后台代码，进入 resource 目录，打开 application-prod.properties配置文件, 配置以下内容：
+打开后台代码，进入 resource 目录，打开 application.properties配置文件, 配置以下内容：
 
 ```properties
 #jdbc连接-mysql数据库

@@ -48,7 +48,9 @@ module.exports = {
     sidebar: {
       '/guide/': [
         '',      /* /guide/ */
+        'prepare', /* /guide/prepare.html */
         'install', /* /guide/install.html */
+        'development', /* /guide/development.html */
         'deploying', /* /guide/deploying.html */
         'function', /* /guide/function.html */
       ],
