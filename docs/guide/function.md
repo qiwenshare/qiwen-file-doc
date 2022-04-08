@@ -201,7 +201,7 @@
 
 文件类型为视频时，点击即可打开预览窗口，展示播放列表，支持快进、后退、暂停、倍速播放、全屏播放、下载视频和折叠播放列表。
 
-视频播放器使用了 [vue-video-player](https://github.com/surmon-china/vue-video-player) ，具体配置项请查看该项目的官方文档，外层播放列表和操作栏为自行封装的。
+视频播放器使用了 [video.js](https://videojs.com/getting-started) ，具体配置项请查看该项目的官方文档，外层播放列表和操作栏为自行封装的。
 
 <img :src="$withBase('/img/guide/function/video.png')" alt="视频在线预览">
 
@@ -216,6 +216,6 @@ MP3 格式的文件支持在线播放。
 除过在线编辑之外，其他的功能均支持在移动端操作，下面视频中简单演示了几种操作：
 
 <video width="100%" height="auto" controls>
-  <source :src="$withBase('/video/guide/function//mobileOperate.mp4')"  type="video/mp4">
+  <source :src="$withBase('/video/guide/function/mobileOperate.mp4')"  type="video/mp4">
   您的浏览器不支持 HTML5 video 标签。
 </video>
