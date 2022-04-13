@@ -16,5 +16,13 @@
 
 ## 5. 如何修改用户的默认存储大小？<br />
 目前演示环境的用户默认存储大小配置是在管理端维护的，管理端代码暂未开源；如需修改，可先通过手动修改数据库表中的字段值来实现：<br />
-  如需修改 **所有新用户默认被分配的存储大小** ，需要在 `sysparam` 表中修改 `totalStorageSize` 字段；<br />
-  如需修改 **老用户或单个用户被分配的存储大小** ，需要在 `storage` 表中修改 `totalStorageSize` 字段
+  - 如需修改 **所有新用户默认被分配的存储大小** ，需要在 `sysparam` 表中修改 `totalStorageSize` 字段；<br />
+  <video width="100%" height="auto" controls>
+    <source :src="$withBase('/video/question/modifyNewUserStorage.mp4')"  type="video/mp4">
+    您的浏览器不支持 HTML5 video 标签。
+  </video>
+  - 如需修改 **老用户或单个用户被分配的存储大小** ，需要在 `storage` 表中修改 `totalStorageSize` 字段
+  <video width="100%" height="auto" controls>
+    <source :src="$withBase('/video/question/modifyOldUserStorage.mp4')"  type="video/mp4">
+    您的浏览器不支持 HTML5 video 标签。
+  </video>
