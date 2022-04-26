@@ -53,7 +53,7 @@
 
 文件查看支持三种展示模式：列表、网格和时间线模式
 
-::: tip
+::: tip 提示
 
 时间线模式目前仅在左侧分类栏选择图片时才支持，我们会尽快支持其他类型的文件
 
@@ -172,7 +172,7 @@
 
 支持 **Word、Excel、PowerPoint** 文件在线预览、编辑、保存功能，集成 [onlyoffice](https://www.qiwenshare.com/essay/detail/1208)
 
-::: tip
+::: tip 注意
 本地启动时，office 文件在线预览需要在本地搭建 [only office](https://www.qiwenshare.com/essay/detail/1208) 服务；<br />
 线上部署时，office 文件在线预览需要在服务器上搭建 [only office](https://www.qiwenshare.com/essay/detail/1208) 服务；
 :::
