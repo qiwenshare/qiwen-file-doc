@@ -87,7 +87,7 @@
 
 ### 文件在线解压缩
 
-支持 ZIP 和 RAR 格式的文件在线解压缩，支持三种解压方式：
+支持 **ZIP、RAR、7Z、TAR** 格式的文件在线解压缩，支持三种解压方式：
 
 1. 解压到当前文件夹
 2. 解压到以当前压缩文件命名的文件夹内
@@ -170,22 +170,29 @@
 
 ### office 在线预览 & 编辑
 
-例如：word 文件在线预览：
-<img :src="$withBase('/img/guide/function/preview.png')" alt="文件在线预览">
-
-例如：word 文件在线编辑：
-<img :src="$withBase('/img/guide/function/edit.png')" alt="文件在线编辑">
+支持 **Word、Excel、PowerPoint** 文件在线预览、编辑、保存功能，集成 [onlyoffice](https://www.qiwenshare.com/essay/detail/1208)
 
 ::: tip
-
 本地启动时，office 文件在线预览需要在本地搭建 [only office](https://www.qiwenshare.com/essay/detail/1208) 服务；<br />
 线上部署时，office 文件在线预览需要在服务器上搭建 [only office](https://www.qiwenshare.com/essay/detail/1208) 服务；
-
 :::
+
+- 预览：直接点击文件名或其图标，进入 office 页面，只可预览不能编辑
+
+   <img :src="$withBase('/img/guide/function/preview.png')" alt="文件在线预览">
+
+- 编辑：右键菜单中，点击“在线编辑”，进入 office 页面，可编辑并保存
+
+   <img :src="$withBase('/img/guide/function/contextMenuEdit.png')" alt="右键菜单 文件在线编辑">
+   <img :src="$withBase('/img/guide/function/edit.png')" alt="文件在线编辑">
+
 
 ### markdown 在线预览 & 编辑
 
 支持 **markdown** 文件在线预览、编辑、保存功能，集成 [mavon-editor](https://www.npmjs.com/package/mavon-editor) ，已内置到前端工程中
+
+- 预览：直接点击文件名或其图标，可查看 markdown 原文和效果，但不可编辑原文
+- 编辑：右键菜单中，点击“在线编辑”，可编辑原文并保存
 
 <img :src="$withBase('/img/guide/function/markdown.png')" alt="mavon-editor 代码编辑器">
 
@@ -194,6 +201,9 @@
 支持 **C、C++、C#、Java、JavaScript、HTML、CSS、Less、Sass、Stylus ……** 等常用代码类文件的在线预览、编辑、保存
 
 集成 [vue-codemirror](https://github.com/surmon-china/vue-codemirror)，已内置到前端工程中，可参考 [codemirror](https://codemirror.net/index.html) 官网说明添加更多语言
+
+- 预览：直接点击文件名或其图标，可查看代码文本，但不可编辑
+- 编辑：右键菜单中，点击“在线编辑”，可编辑代码文本并保存
 
 <img :src="$withBase('/img/guide/function/codemirror.png')" alt="codemirror 代码编辑器">
 
