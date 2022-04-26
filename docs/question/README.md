@@ -12,7 +12,7 @@
 没有，网盘需要自行注册用户，然后登录即可。
 
 ## 4. office 文件预览时显示空白页面<br />
-需要安装 onlyoffice 服务，具体请查看 [在windows服务器上安装 ONLYOFFICE](https://www.qiwenshare.com/essay/detail/1208)
+需要安装 OnlyOffice 服务，具体请查看 [在windows服务器上安装 ONLYOFFICE](https://www.qiwenshare.com/essay/detail/1208)
 
 ## 5. 如何修改用户的默认存储大小？<br />
 目前演示环境的用户默认存储大小配置是在管理端维护的，管理端代码暂未开源；如需修改，可先通过手动修改数据库表中的字段值来实现：<br />
@@ -26,3 +26,37 @@
     <source :src="$withBase('/video/question/modifyOldUserStorage.mp4')"  type="video/mp4">
     您的浏览器不支持 HTML5 video 标签。
   </video>
+
+## 6. OnlyOffice 预览报错排查流程总结<br />
+以下总结部分来源于 [OnlyOffice 官方 Troubleshooting](https://api.onlyoffice.com/editors/troubleshooting)，如遇到问题，请先查看 OnlyOffice 官方提供的[故障排查](https://api.onlyoffice.com/editors/troubleshooting)，看能否解决您的问题
+### 6.1 检测 OnlyOffice 服务是否安装成功
+首先访问 OnlyOffice 首页，如下图：
+<img :src="$withBase('/img/question/6_1_onlyoffice_home.png')" alt="onlyoffice">
+出现上图仍旧不能说明你的 OnlyOffice 服务已经成功安装，我们需要启动 OnlyOffice 服务测试用例来检测，可以看到上图出现了两条命令，第一条命令是用来启动 测试用例服务的，我们只需要在后台执行该命令即可，
+
+启动完成后，点击下方按钮即可进入主页，如果没有启动或启动失败，点击链接则进入报错页面，如下图：
+<img :src="$withBase('/img/question/6_1_onlyoffice_fail.png')" alt="onlyoffice">
+
+成功启动如下图：
+<img :src="$withBase('/img/question/6_1_onlyoffice_success.png')" alt="onlyoffice">
+接下来可以在这个页面来创建或者上传问件，如果功能正常，则说明 OnlyOffice 的安装时没有问题的
+
+### 6.2 预览 office 文件出现白页
+出现白页说明网盘配置的 OnlyOffice 服务器地址是错误的，解决方式如下：
+
+打开 `/resource/config/settings.properties` 文件，在该文件中检查 `files.docservice.url.site` 属性中配置正确的 OnlyOffice 地址，==强烈建议使用ipv4地址==
+### 6.3 预览 office 文件一直显示加载中
+查看 OnlyOffice 是否安装成功，检测方法看 [常见问题(FAQ) 6.1](/question/#_6-1-检测-onlyoffice-服务是否安装成功)
+### 6.4 预览 office 文件提示“下载失败”
+OnlyOffice 官方解释 [Download failed](https://api.onlyoffice.com/editors/troubleshooting#download)
+
+<img :src="$withBase('/img/question/6_4_download_fail.png')" alt="onlyoffice">
+
+下载失败说明应用地址配置错误，解决方式如下：
+打开 `/resource/config/application.properties` 文件，在该文件中检查 `deployment.host` 地址是否正确，该地址是当前网盘所在的服务器IP地址，**强烈建议使用ipv4地址**
+
+
+::: warning 注意
+- 如果网盘和 OnlyOffice 服务部署在**不同**的机器上，那么以上地址必须是**外网 IP** 地址
+- 如果网盘和 OnlyOffice 服务部署在**同一台**机器上，那么使用**内网和外网 IP** 都是可以的。
+:::

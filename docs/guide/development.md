@@ -14,7 +14,7 @@
 npm run serve
 ```
 
-::: tip
+::: warning 警告
 
 每次修改完`vue.config.js`中的配置项，都需要重新启动项目才会生效
 
