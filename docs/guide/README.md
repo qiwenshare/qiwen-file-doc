@@ -77,7 +77,7 @@
 
 | 功能              | 描述                                                         |
 | ----------------- | ------------------------------------------------------------ |
-| office 在线编辑   | Word、Excel、PowerPoint 文档的在线创建、**在线编辑**、协同编辑功能<br />集成 [OnlyOffice](https://api.onlyoffice.com/)，安装方式参考 [安装 ONLYOFFICE](https://www.qiwenshare.com/essay/detail/1208) |
+| office 在线编辑   | Word、Excel、PowerPoint 文档的在线创建、预览、**在线编辑**功能<br />集成 [OnlyOffice](https://api.onlyoffice.com/)，安装方式参考 [安装 ONLYOFFICE](https://www.qiwenshare.com/essay/detail/1208) |
 | markdown 在线编辑 | 支持 **markdown** 文件在线预览、编辑、保存功能<br />集成 [mavon-editor](https://www.npmjs.com/package/mavon-editor) ，已内置到前端工程中 |
 | 代码在线编辑      | 支持 **C、C++、C#、Java、JavaScript、HTML、CSS、Less、Sass、Stylus**  <br />等常用代码类文件的在线预览、编辑、保存<br />集成 [vue-codemirror](https://github.com/surmon-china/vue-codemirror)，已内置到前端工程中，<br />可参考 [codemirror](https://codemirror.net/index.html) 官网说明添加更多语言 |
 | 文件分类查看      | 图片、视频、音乐、文档、其他，分类查看更快捷                 |
