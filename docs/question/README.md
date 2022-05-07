@@ -60,3 +60,12 @@ OnlyOffice 官方解释 [Download failed](https://api.onlyoffice.com/editors/tro
 - 如果网盘和 OnlyOffice 服务部署在**不同**的机器上，那么以上地址必须是**外网 IP** 地址
 - 如果网盘和 OnlyOffice 服务部署在**同一台**机器上，那么使用**内网和外网 IP** 都是可以的。
 :::
+
+## 7. 大文件下载到一定大小之后，又从0开始下载
+
+该问题一般出现在生产环境，原因是 nginx 缓存导致的超时，解决办法是关闭 nginx 缓存。
+在 nginx.conf 配置文件中的 http 节点下，配置如下属性：
+```
+proxy_request_buffering off;
+proxy_buffering off;
+```
