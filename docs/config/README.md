@@ -50,6 +50,15 @@ ufop.local-storage-path=D:/export
 
 :::
 
+## 存储桶名称配置
+
+之前UFOP上传的文件默认在服务器中的位置为upload开头，但是有的小伙伴反馈说因业务不同需要不同的根目录存储，因此引入了存储桶（bucket）的概念，并支持可配置，配置方式如下：
+
+```properties
+ufop.bucket-name=upload
+```
+
+
 ## 数据库配置
 
 打开后台代码，进入 resource 目录，打开 application.properties配置文件, 配置以下内容：
@@ -226,11 +235,18 @@ sudo -i service elasticsearch stop
 
 ### 奇文网盘配置
 
-打开 `application.properties` 文件，在文件中修改如下脚本：
+打开 `com.qiwenshare.file.config.es.ElasticSearchConfig.java` 文件，修改如下配置：
 
-```properties
-spring.data.elasticsearch.client.reactive.endpoints=127.0.0.1:9200
-spring.elasticsearch.rest.uris=127.0.0.1:9200
+```java
+@Configuration
+public class ElasticSearchConfig {
+    @Bean
+    public ElasticsearchClient elasticsearchClient(){
+        RestClient client = RestClient.builder(new HttpHost("localhost", 9200,"http")).build();
+        ElasticsearchTransport transport = new RestClientTransport(client,new JacksonJsonpMapper());
+        return new ElasticsearchClient(transport);
+    }
+}
 ```
 
 ## 缩略图配置
