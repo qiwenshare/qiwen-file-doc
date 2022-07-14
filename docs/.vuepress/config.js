@@ -53,6 +53,7 @@ module.exports = {
         'development', /* /guide/development.html */
         'deploying', /* /guide/deploying.html */
         'function', /* /guide/function.html */
+        'frontend', /* /guide/frontend.html */
       ],
       '/config/': [
         '',      /* /config/ */
