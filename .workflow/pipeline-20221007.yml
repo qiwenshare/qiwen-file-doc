@@ -21,7 +21,8 @@ stages:
         commands:
           - '# 设置NPM源，提升安装速度'
           - npm config set registry https://registry.npmmirror.com
-          - ''
+          - bash getFrontendLog.sh
+          - bash getBackendLog.sh
           - '# 执行编译命令'
           - npm install && npm run build
         artifacts:
@@ -63,11 +64,11 @@ stages:
           - ''
           - cd ~/gitee_go/deploy/qiwen-file-doc
           - tar -zxvf qiwen-file-doc.tar.gz
+          - ''
           - rm -r /home/html/qiwen-file-doc
           - cp -r dist /home/html/qiwen-file-doc
           - ''
-          - bash getFrontendLog.sh
-          - bash getBackendLog.sh
+          - ''
           - ' echo ''Hello Gitee!'''
         notify: []
         strategy:
