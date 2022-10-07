@@ -65,6 +65,9 @@ stages:
           - tar -zxvf qiwen-file-doc.tar.gz
           - rm -r /home/html/qiwen-file-doc
           - cp -r dist /home/html/qiwen-file-doc
+          - ''
+          - bash getFrontendLog.sh
+          - bash getBackendLog.sh
           - ' echo ''Hello Gitee!'''
         notify: []
         strategy:
