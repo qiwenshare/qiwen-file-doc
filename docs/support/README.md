@@ -27,8 +27,20 @@
 如您有问题，请加入 QQ 群咨询
 
 **QQ 交流群**、**微信公众号**或 **Gitee** 请扫描下面二维码
-
-<img :src="$withBase('/img/guide/contact/contactUs.png')" alt="交流群">
+<div style="display: flex; text-align: center;">
+  <div style="width: 30%; margin-right: 5%">
+    <p>奇文社区 QQ 群（3群）</p>
+    <img :src="$withBase('/img/guide/contact/QQ.png')" alt="交流群" style="width: 250px;" />
+  </div>
+  <div style="width: 30%; margin-right: 5%">
+    <p>微信公众号</p>
+    <img :src="$withBase('/img/guide/contact/wechat.png')" alt="交流群" style="width: 250px" />
+  </div>
+  <div style="width: 30%;">
+    <p>Gitee 社区</p>
+    <img :src="$withBase('/img/guide/contact/Gitee.png')" alt="交流群" style="width: 250px" />
+  </div>
+</div>
 
 # 成为赞助商
 
