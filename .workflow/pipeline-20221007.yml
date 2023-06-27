@@ -47,7 +47,7 @@ stages:
         hostGroupID:
           ID: qiwen
           hostID:
-            - 8c013cf3-ba18-43f1-9dc7-bbee3d84b70c
+            - 31b5a824-3a61-422e-80b6-d5606fcac92a
         deployArtifact:
           - source: build
             name: qiwen-file-doc
@@ -65,7 +65,7 @@ stages:
           - cd ~/gitee_go/deploy/qiwen-file-doc
           - tar -zxvf qiwen-file-doc.tar.gz
           - ''
-          - rm -r /home/html/qiwen-file-doc
+          - rm -rf /home/html/qiwen-file-doc
           - cp -r dist /home/html/qiwen-file-doc
           - ''
           - ''
